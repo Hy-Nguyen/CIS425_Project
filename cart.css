@@ -1,0 +1,10 @@
+.cart-item{
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.hero-image {
+    height: calc(100vh / 3); /* Set the height to one-third of the viewport height */
+    background-color: blueviolet;    
+    background-size: cover;
+    background-position: center;
+  }
