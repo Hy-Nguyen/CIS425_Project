@@ -1,0 +1,39 @@
+:root{
+    --button-color: #ef4339;
+    --text: #f1e2f3;
+    --background: #210f24;
+    --primary: #480c51;
+    --secondary: #2f1533;
+    --accent: #ae58bb;
+
+    --shadow-color: 285deg 56% 41%;
+    --shadow-elevation-low:
+      -0.6px 0.6px 1.1px hsl(var(--shadow-color) / 0.42),
+      -2.6px 2.8px 4.8px -1.6px hsl(var(--shadow-color) / 0.65);
+      --shadow-elevation-medium:
+      -0.9px 0.5px 1.4px hsl(var(--shadow-color) / 0.16),
+      -5px 2.9px 8px -0.2px hsl(var(--shadow-color) / 0.36),
+      -10.9px 6.2px 17.4px -0.5px hsl(var(--shadow-color) / 0.55),
+      -23.6px 13.5px 37.7px -0.7px hsl(var(--shadow-color) / 0.74);
+    --shadow-elevation-high:
+      -0.6px 0.6px 1.1px hsl(var(--shadow-color) / 0.36),
+      -7.1px 7.5px 13px -0.3px hsl(var(--shadow-color) / 0.43),
+      -14.2px 14.9px 25.9px -0.6px hsl(var(--shadow-color) / 0.5),
+      -25.4px 26.6px 46.3px -1px hsl(var(--shadow-color) / 0.57),
+      -44px 46.2px 80.4px -1.3px hsl(var(--shadow-color) / 0.63),
+      -73.8px 77.4px 134.8px -1.6px hsl(var(--shadow-color) / 0.7);
+  }
+main{
+    background-color: var(--accent);
+    color: var(--text);
+}
+.cart-item{
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.btn-primary{
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+    box-shadow: var(--shadow-elevation-medium);
+}
