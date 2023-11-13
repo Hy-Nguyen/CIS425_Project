@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open Product.html",
-            "file": "c:\\Users\\aryan\\OneDrive\\Desktop\\CIS 425 Project\\CIS425_Project\\Product.html"
+            "name": "Open products.html",
+            "file": "c:\\Users\\aryan\\OneDrive\\Desktop\\CIS 425 Project\\CIS425_Project\\products.html"
         }
     ]
 }
