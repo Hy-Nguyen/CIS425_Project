@@ -1,0 +1,25 @@
+:root{
+    --button-color: #ef4339;
+    --text: #f1e2f3;
+    --background: #210f24;
+    --primary: #480c51;
+    --secondary: #2f1533;
+    --accent: #ae58bb;
+  
+  }
+footer{
+    background-color: var(--background);
+    color: var(--text);
+}
+.social-media-container{
+    background-color: var(--primary);
+}
+.footer-container{
+    background-color: var(--background);
+  }
+  .footer-body{
+    background-color: var(--background);
+  }
+  .footer-header{
+    color: var(--accent);
+  }

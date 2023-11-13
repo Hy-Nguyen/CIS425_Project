@@ -5,11 +5,11 @@
   --primary: #480c51;
   --secondary: #2f1533;
   --accent: #ae58bb;
-
 }
+
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #fff;
+    background-color: var(--text) ;
     line-height: 1.9;
     color: #8c8c8c;
     position: relative; }
@@ -17,7 +17,7 @@ body {
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Roboto", sans-serif;
-    color: #000; }
+    color: var(--accent); }
   
   a {
     -webkit-transition: .3s all ease;
@@ -30,23 +30,31 @@ body {
     color: #000; }
   
   .content {
-    padding: 7rem 0; }
+    padding: 7rem ; 
+  }
   
   .heading {
     font-size: 2.5rem;
     font-weight: 900; }
+  .contact-wrap{
+    background-color: var(--primary);
+  }
   
   .form-control {
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--accent);
     padding-left: 0;
     padding-right: 0;
     border-radius: 0;
-    background: none; }
+    background: var(--secondary);
+    color: var(--text); 
+  }
+    .form-control::placeholder{
+      color: var(--text); 
+    }
     .form-control:active, .form-control:focus {
       outline: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
+      
       border-color: #000; }
   
   .col-form-label {
@@ -64,10 +72,10 @@ body {
       font-size: 1rem;
       font-weight: 400;
       line-height: 1.5;
-      color: #495057;
+      color: var(--text);
       vertical-align: middle;
       background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
-      background-color: #fff;
+      background-color: var(--secondary);
       border: 1px solid #ced4da;
       border-radius: 0.25rem;
       -webkit-appearance: none;
@@ -83,8 +91,7 @@ body {
     border-radius: 0; }
     .custom-select:active, .custom-select:focus {
       outline: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
+      
       border-color: #000; }
   
   .btn {
@@ -109,9 +116,9 @@ body {
       box-shadow: none; }
   
   .contact-wrap {
-    -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.05);
-    border: 1px solid #efefef; }
+    border: 1px solid #efefef; 
+
+  }
     .contact-wrap .col-form-label {
       font-size: 14px;
       color: #b3b3b3;
@@ -130,9 +137,11 @@ body {
           color: #fff;
           margin-top: 5px; }
     .contact-wrap .form {
-      background: #fff; }
+      background: var(--primary); 
+
+    }
       .contact-wrap .form h3 {
-        color: #000;
+        color: var(--text);
         font-size: 2rem;
         font-weight: 700;
         margin-bottom: 30px; }

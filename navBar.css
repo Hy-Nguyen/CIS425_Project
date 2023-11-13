@@ -2,17 +2,21 @@
 *{
     font-family: 'Nunito Sans', sans-serif;
 }
-
+:root{
+    --button-color: #ef4339;
+    --text: #f1e2f3;
+    --background: #210f24;
+    --primary: #480c51;
+    --secondary: #2f1533;
+    --accent: #ae58bb;
+  }
+.navbar{
+    background-color: var(--primary);
+}
+.logo-header{
+    color: var(--text);
+}
 .nav-link:hover{
     color:white;
     background-color: aquamarine;
-}
-body{
-    /* background: url("tempBG.jpg") rgba(0,0,0,0.3);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh; */
-    background-color: white;
 }
