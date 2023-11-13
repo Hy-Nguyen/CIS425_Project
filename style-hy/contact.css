@@ -9,7 +9,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: var(--text) ;
+    background-color: var(--accent) ;
     line-height: 1.9;
     color: #8c8c8c;
     position: relative; }
@@ -116,7 +116,7 @@ body {
       box-shadow: none; }
   
   .contact-wrap {
-    border: 1px solid #efefef; 
+    border: 1px solid var(--secondary); 
 
   }
     .contact-wrap .col-form-label {
