@@ -78,15 +78,8 @@
       <head>
         <title>Product Page</title>
         <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f5f5f5;
-                margin: 0;
-                padding: 0;
-            }
-    
             .product {
-                background-color: #fff;
+                background-color: #210f24;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 max-width: 600px;
@@ -158,7 +151,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #210f24;
             margin: 0;
             padding: 0;
         }
@@ -171,7 +164,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #fff;
+            background-color: #2f1533;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin: 20px 0;
@@ -186,26 +179,32 @@
         }
         h2 {
             font-size: 24px;
-            color: #333;
+            color: #f1e2f3;
         }
         .specs {
             margin: 10px 0;
+            color: #f1e2f3;
         }
         .price {
-            font-size: 20px;
-            color: #0074d9;
+            font-size: 30px;
+            color: #860EFD;
             margin-top: 10px;
         }
         .product-image img {
             max-width: 100%;
         }
+        .quantity {
+           color: #fff; /* Add this line to set the text color to white */
+        }
+
+        
     </style>
 </head>
 <body>
     <div class="container">
         <div class="product-container">
             <div class="product-description">
-              <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">META APOLLO 14</h2>
+              <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">APOLLO 14</h2>
               <div class="specs">
                 <p><strong>CHASSIS:</strong> DEEPCOOL CH370 - BLACK</p>
                 <p><strong>PROCESSOR:</strong> INTEL CORE I5-14600KF</p>
@@ -234,7 +233,7 @@
 
     <div class="product-container">
         <div class="product-description">
-          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">META MONOTECH</h2>
+          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">MONOTECH</h2>
           <div class="specs">
                 <p><strong>CHASSIS:</strong> MONTECH AIR 100</p>
                 <p><strong>PROCESSOR:</strong> AMD RYZEN™ 5 5600X</p>
@@ -261,7 +260,7 @@
 
     <div class="product-container">
         <div class="product-description">
-          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">META SERENITY</h2>
+          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">SERENITY</h2>
             <div class="specs">
                 <p><strong>CHASSIS:</strong> LM300 ARGB</p>
                 <p><strong>PROCESSOR:</strong> INTEL CORE I3-12100F</p>
@@ -284,6 +283,34 @@
             <img src="serenity.png" alt="META SERENITY">
         </div>
     </div>
+
+    <div class="product-container">
+      <div class="product-description">
+          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">P41n Str33t</h2>
+          <div class="specs">
+              <p><strong>CHASSIS:</strong> HYTE Y40 - BLACK</p>
+              <p><strong>PROCESSOR:</strong> INTEL CORE™ I7-14700K</p>
+              <p><strong>GRAPHICS CARD:</strong> NVIDIA GEFORCE RTX 4080</p>
+              <p><strong>MOTHERBOARD:</strong> ASROCK Z790 STEEL LEGEND</p>
+              <p><strong>MEMORY:</strong> 32GB KINGSTON FURY DDR5 6400MHZ (2X16GB)</p>
+              <p><strong>COOLING:</strong> DEEPCOOL LS720</p>
+              <p><strong>POWER SUPPLY:</strong> EVGA 1000W</p>
+              <p><strong>OPERATING SYSTEM:</strong>MICROSOFT WINDOWS 11 HOME</p>
+              <p><strong>M.2 STORAGE | SLOT 1:</strong> 2TB META M.2</p>
+              <p><strong>RGB CASE FANS:</strong>META 120MM RGB CASE FANS X5 - BLACK</p>
+          </div>
+          <p class="price">$3659</p>
+          <div class="quantity">
+              <label for="quantity-new-product">Quantity:</label>
+              <input type="number" id="quantity-new-product" value="1" min="1">
+          </div>
+          <button class="add-to-cart-button" data-product="P41n Str33t" data-price="1999" data-image="P41n Str33t.png" style="margin-top: 10px; background-color: #860EFD; border-radius: 5px; color: #fff;">Add to Cart</button>
+      </div>
+      <div class="product-image">
+          <img src="P41n Str33t.png" alt="P41n Str33t">
+      </div>
+  </div>
+  
     
 </body>
         
