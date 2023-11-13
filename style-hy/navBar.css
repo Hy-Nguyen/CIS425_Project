@@ -14,7 +14,7 @@
     background-color: var(--primary);
 }
 .logo-header{
-    color: var(--text);
+    width: 10%;
 }
 .nav-link:hover{
     color:white;

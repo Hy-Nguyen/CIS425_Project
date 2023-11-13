@@ -7,6 +7,7 @@
   --accent: #ae58bb;
 }
 
+
 body {
     font-family: "Roboto", sans-serif;
     background-color: var(--accent) ;
@@ -39,7 +40,19 @@ body {
   .contact-wrap{
     background-color: var(--primary);
   }
-  
+  .map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
   .form-control {
     border: none;
     border-bottom: 1px solid var(--accent);
