@@ -21,7 +21,7 @@
   }
 
 #homeheroimg {
-    background-image: url('homepage.jpg');
+    background-image: url("/assets-henry/homepage.jpg");
     background-size: cover;
     background-position: center;
     height: 500px;

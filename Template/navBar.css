@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,600&display=swap');
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.nav-link:hover{
+    color:white;
+    background-color: aquamarine;
+}
+body{
+    /* background: url("tempBG.jpg") rgba(0,0,0,0.3);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; */
+    background-color: white;
+}
