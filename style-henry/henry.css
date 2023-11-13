@@ -2,12 +2,25 @@
 *{
     font-family: 'Nunito Sans', sans-serif;
 }
-
+:root{
+    --button-color: #ef4339;
+    --text: #f1e2f3;
+    --background: #210f24;
+    --primary: #480c51;
+    --secondary: #2f1533;
+    --accent: #ae58bb;
+}
 .nav-link:hover{
     color:white;
     background-color: aquamarine;
 }
-
+main{
+    background-color: var(--secondary);
+    color: var(--text);
+}
+main h1{
+    color: var(--text);
+}
 .centered {
     position: absolute;
     top: 50%;
@@ -35,7 +48,7 @@
 
 /* Optional: Add a background color in case the image is not available */
 .imgcontainer {
-    background-color: #ffffff; /* Set a fallback background color */
+    background-color: var(--secondary); /* Set a fallback background color */
     padding-bottom: 20px;
 }
 
@@ -44,8 +57,8 @@
     margin-top: 10px;
     padding: 8px 16px;
     text-decoration: none;
-    background-color: #3498db;
-    color: white;
+    background-color: var(--accent);
+    color: var(--text);
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
