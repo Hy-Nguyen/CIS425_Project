@@ -29,3 +29,7 @@ footer{
   .footer-header{
     color: var(--accent);
   }
+
+.row {
+  background-color: var(--background);
+}

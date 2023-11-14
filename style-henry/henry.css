@@ -10,9 +10,9 @@
     --secondary: #2f1533;
     --accent: #ae58bb;
 }
-.nav-link:hover{
-    color:white;
-    background-color: aquamarine;
+
+body {
+    background-color: var(--secondary)
 }
 main{
     background-color: var(--secondary);
