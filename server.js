@@ -9,11 +9,6 @@ const mysql = require('mysql');
 const qs = require('querystring');
 const {errorMonitor} = require('stream');
 
-// Import MongoClient from the MongoD node.js
-const {MongoClient } = require('mongodb');
-const exp = require('constants');
-const db = 'ordersDB';
-
 const fileExtenions = {
     '.html': 'text/html',
     '.css': 'text/css',
@@ -23,12 +18,19 @@ const fileExtenions = {
     '.png': 'text/png'
 };
 
-// Replace Below Parameters with Your Own
+// // Replace Below Parameters with Your Own
+// const con = mysql.createConnection({
+//     host: 'localhost', // 'sql.wpc-is.online'
+//     user: "root", // 'root'
+//     password: '4143WMaryland.', //"hgng5048",
+//     database: "Project"
+// });
+
 const con = mysql.createConnection({
-    host: 'localhost', // 'sql.wpc-is.online'
-    user: "root", // 'root'
-    password: '4143WMaryland.', //"hgng5048",
-    database: "Project"
+    host: 'sql.wpc-is.online',
+    user: "hgnguye3", 
+    password: "hgng5048",
+    database: "test"
 });
 
 con.connect();
