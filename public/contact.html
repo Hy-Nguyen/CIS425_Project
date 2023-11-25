@@ -115,7 +115,6 @@
                   method="POST"
                   id="contactForm"
                   name="contactForm"
-                  action="/contact"
                 >
                   <div class="row">
                     <div
@@ -228,12 +227,52 @@
                     </div>
                   </div>
                 </form>
+                <!-- Modal -->
                 <div
-                  id="form-message-warning mt-4"
-                ></div>
-                <div id="form-message-success">
-                  Your message was sent, thank
-                  you!
+                  class="modal fade"
+                  id="staticBackdrop"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  tabindex="-1"
+                  aria-labelledby="staticBackdropLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1
+                          class="modal-title fs-5"
+                          id="staticBackdropLabel"
+                        >
+                          Modal title
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                        >
+                          Understood
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -255,7 +294,6 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-
         <!--Google Maps-->
       </div>
     </main>
@@ -475,8 +513,117 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5"
+              id="exampleModalLabel"
+            >
+              Message Received
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
+  <script>
+    const contactForm = document.getElementById(
+      "contactForm"
+    );
+    const nameInput =
+      document.getElementById("name");
+    const emailInput =
+      document.getElementById("email");
+    const budgetSelect =
+      document.getElementById("budget");
+    const messageTextArea =
+      document.getElementById("message");
+
+    function contactUs() {
+      const name = nameInput.value;
+      const email = emailInput.value;
+      const budget = budgetSelect.value;
+      const message = messageTextArea.value;
+
+      const requestData = {
+        name: name,
+        email: email,
+        budget: budget,
+        message: message,
+      };
+
+      // Use fetch to send a POST request
+      fetch("/contact", {
+        method: "POST",
+        body: JSON.stringify(requestData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            console.log("HELLOOO");
+            var myModal = new bootstrap.Modal(
+              document.getElementById(
+                "successModal"
+              )
+            );
+            myModal.toggle();
+            contactForm.reset();
+          } else {
+            //Unsuccessful
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          message.textContent =
+            "An error has occurred";
+        });
+    }
+    // Adding an event listener for the 'submit' event
+    contactForm.addEventListener(
+      "submit",
+      function (e) {
+        // Prevent the form from submitting normally
+        e.preventDefault();
+
+        // Call your function
+        contactUs();
+
+        // Submit the form programmatically (if needed)
+        // contactForm.submit();
+      }
+    );
+  </script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

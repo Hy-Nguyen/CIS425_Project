@@ -1,13 +1,7 @@
-const express = require('express');
+const {MongoClient} = require('mongodb');
 const bodyParser = require('body-parser');
+const express = require('express');
 const app = express();
-const http = require('http');
-const fs = require('fs');
-const url = require('url');
-const path = require('path');
-const mysql = require('mysql');
-const qs = require('querystring');
-const {errorMonitor} = require('stream');
 
 const fileExtenions = {
     '.html': 'text/html',
@@ -18,22 +12,14 @@ const fileExtenions = {
     '.png': 'text/png'
 };
 
-// // Replace Below Parameters with Your Own
-// const con = mysql.createConnection({
-//     host: 'localhost', // 'sql.wpc-is.online'
-//     user: "root", // 'root'
-//     password: '4143WMaryland.', //"hgng5048",
-//     database: "Project"
-// });
+/**
+     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
+     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
+     */
+const uri = "mongodb+srv://root:4143WMaryland.@metapc.0nhcxzq.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: false});
+// console.log(client);
 
-const con = mysql.createConnection({
-    host: 'sql.wpc-is.online',
-    user: "hgnguye3", 
-    password: "hgng5048",
-    database: "test"
-});
-
-con.connect();
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -41,42 +27,50 @@ app.use(bodyParser.json());
 // Serve static files from public folder
 app.use(express.static("public"));
 
-// Define a route handler for the root URL
+// Route Handlers
 app.get('/', (req, res) => {
-    // Use path.join to construct the path to the index.html file
-    const indexPath = path.join(__dirname, 'index.html');
-
-    //  Send the index.html file
-    res.sendFile(indexPath);
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+app.get('/account', (req, res) => {
+    res.sendFile(path.join(__dirname, 'account.html'));
+});
+app.get('/cart', (req, res) => {
+    res.sendFile(path.join(__dirname, 'cart.html'));
+});
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'contact.html'));
+});
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'login.html'));
+});
+app.get('/products', (req, res) => {
+    res.sendFile(path.join(__dirname, 'products.html'));
 });
 
-app.post('/contact', (req, res) => {
-    const {name, email, budget, message} = req.body;
-
-    // print request body for debugging
-    console.log('Requestion Body: ',  req.body);
-
-    // insert data into My Sql Table
-    con.query(
-        // 'INSERT INTO tableName (name, email, budget, message) VALUES (?, ?, ?, ?)',
-        'INSERT INTO contact_form (name, email, budget, message) \
-        VALUES (?, ?, ?, ?)',
-
-        [name, email, budget, message],
-        (error, results) => {
-            if (error) {
-                console.log('error inserting data: ', error);
-                res.status(300).json({error: 'Database error: ', details: error.message});
-
-            } 
-            res.redirect('/index.html');        
-        }
-    )
-});  // action
-
+const database = 'MetaPC';
+const contact_name = 'contact_form';
 // Start the Express server
-const port = 8000;
-app.listen(port, () => {
-    console.log(`The web server is alive! \nListening on http://localhost:${port}`);
+client.connect()
+  .then(() => {
+    const db = client.db(database);
+    contact_collection = db.collection(contact_name);
+    app.listen(8000, () => {
+      console.log(`The web server is alive! \nListening on http://localhost:8000`);
+    });
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
+// Contact Form POST request
+app.post('/contact', async (req, res) => {
+    const {name, email, budget, message } = req.body;
+    try{
+        await contact_collection.insertOne(req.body);
+        res.json({success:true})
+        console.log(req.body)
+    } catch(err) {
+        console.error(err);
+        res.json({ success: false });  
+    }
 });
