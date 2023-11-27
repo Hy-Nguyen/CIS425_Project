@@ -105,15 +105,50 @@
       <div
         class="login-header d-flex justify-content-center"
       >
-        <h1>Log In</h1>
+        <h1>Sign Up</h1>
       </div>
       <form
         class="col g-3 flex-column needs-validation m-auto"
+        id="sign-up-form"
         novalidate
       >
+        <div class="m-auto row col-md-4 g-2 my-2">
+          <div class="col">
+            <label
+              type="text"
+              class="form-label"
+              for="f-name"
+              >First Name:</label
+            >
+            <input
+              type="text"
+              id="f-name-input"
+              class="form-control"
+              name="f-name-input"
+              placeholder="Enter your first name:"
+              required
+            />
+          </div>
+          <div class="col">
+            <label
+              type="text"
+              class="form-label"
+              for="l-name"
+              >Last Name:</label
+            >
+            <input
+              type="text"
+              id="l-name-input"
+              class="form-control"
+              name="l-name-input"
+              placeholder="Enter your last name:"
+              required
+            />
+          </div>
+        </div>
         <div class="m-auto col col-md-4 g-2">
           <label
-            type="text"
+            type="email"
             class="form-label"
             for="user_Email"
             >E-Mail:</label
@@ -133,47 +168,134 @@
             Enter Valid E-Mail
           </div>
         </div>
-        <div class="m-auto col col-md-4 pt-3">
+        <div class="m-auto col col-md-4 g-2 my-1">
           <label
+            for="street1-input"
             class="form-label"
-            for="user_Password"
+            >Street Address 1:</label
+          >
+          <input
+            type="text"
+            id="street1-input"
+            class="form-control"
+            name="street1-input"
+            placeholder="Enter your street address:"
+            required
+          />
+
+          <label
+            for="street2-input"
+            class="form-label"
+            >Street Address 2:</label
+          >
+          <input
+            type="text"
+            id="street2-input"
+            class="form-control"
+            name="street2-input"
+            placeholder="Enter your street address:"
+          />
+
+          <div class="row g-2">
+            <div class="col">
+              <label
+                for="city-input"
+                class="form-label"
+                >City:</label
+              >
+              <input
+                type="text"
+                id="city-input"
+                class="form-control"
+                name="city-input"
+                placeholder="Enter your city:"
+                required
+              />
+            </div>
+
+            <div class="col">
+              <label
+                for="state-input"
+                class="form-label"
+                >State:</label
+              >
+              <input
+                type="text"
+                id="state-input"
+                class="form-control"
+                name="state-input"
+                placeholder="Enter your state:"
+                required
+              />
+            </div>
+
+            <div class="col">
+              <label
+                for="zip-input"
+                class="form-label"
+                >Zip Code:</label
+              >
+              <input
+                type="text"
+                id="zip-input"
+                class="form-control"
+                name="zip-input"
+                placeholder="Enter your zip code:"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="m-auto col col-md-4 g-2">
+          <label
+            for="password-input"
+            class="form-label"
             >Password:</label
           >
           <input
             type="password"
-            id="user_Password"
+            id="password-input"
             class="form-control"
-            name="user_Password"
-            placeholder="Enter Your Password"
+            name="password-input"
+            placeholder="Enter your password:"
             required
           />
-          <div class="invalid-feedback">
-            Incorrect/Invalid password. Please try
-            again
-          </div>
         </div>
-        <div class="row d-flex m-3 text-center">
-          <!-- Simple link -->
-          <a href="#!">Forgot password?</a>
+
+        <div class="m-auto col col-md-4 g-2">
+          <label
+            for="confirm-password-input"
+            class="form-label"
+            >Confirm Password:</label
+          >
+          <input
+            type="password"
+            id="confirm-password-input"
+            class="form-control"
+            name="confirm-password-input"
+            placeholder="Confirm your password:"
+            required
+          />
+          <div
+            class="invalid-feedback"
+            id="passwordConfirm"
+          >
+            Passwords do not match! Please try
+            again.
+          </div>
         </div>
 
         <div
-          class="button-container row text-center m-auto d-flex"
+          class="button-container row text-center m-auto d-flex my-3"
         >
           <!-- Submit button -->
           <button
             type="submit"
             class="btn btn-primary btn-block mb-4"
           >
-            Sign in
+            Register
           </button>
-        </div>
-        <!-- Register buttons -->
-        <div class="text-center">
-          <p>
-            Not a member?
-            <a href="signup.html">Register</a>
-          </p>
         </div>
       </form>
     </main>
@@ -411,31 +533,86 @@
               event.stopPropagation();
               form.classList.add("was-validated");
             } else {
-              const emailInput =
+              const passwordInput =
+                document.getElementById(
+                  "password-input"
+                );
+              const confirmPasswordInput =
+                document.getElementById(
+                  "confirm-password-input"
+                );
+
+              // Check if passwords match
+              if (
+                passwordInput.value !==
+                confirmPasswordInput.value
+              ) {
+                confirmPasswordInput.classList.add(
+                  "is-invalid"
+                );
+                return;
+              } else {
+                confirmPasswordInput.classList.remove(
+                  "is-invalid"
+                );
+              }
+
+              // Continue with the rest of your code
+              const firstName =
+                document.getElementById(
+                  "f-name-input"
+                ).value;
+              const lastName =
+                document.getElementById(
+                  "l-name-input"
+                ).value;
+              const email =
                 document.getElementById(
                   "user_Email"
                 ).value;
-              const passwordInput =
+              const street1 =
                 document.getElementById(
-                  "user_Password"
+                  "street1-input"
                 ).value;
-              const passwordBox =
+              const street2 =
                 document.getElementById(
-                  "user_Password"
-                );
+                  "street2-input"
+                ).value;
+              const city =
+                document.getElementById(
+                  "city-input"
+                ).value;
+              const state =
+                document.getElementById(
+                  "state-input"
+                ).value;
+              const zip =
+                document.getElementById(
+                  "zip-input"
+                ).value;
 
-              const reqData = {
-                email: emailInput,
-                password: passwordInput,
+              // Prepare the data to send
+              const userSignUp = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                address: {
+                  street1: street1,
+                  street2: street2,
+                  city: city,
+                  state: state,
+                  zip: zip,
+                },
+                password: passwordInput.value,
               };
 
-              fetch("/login", {
+              fetch("/signup", {
                 method: "POST",
                 headers: {
                   "Content-Type":
                     "application/json",
                 },
-                body: JSON.stringify(reqData),
+                body: JSON.stringify(userSignUp),
               })
                 .then((response) =>
                   response.json()
@@ -446,46 +623,9 @@
                   } else {
                     console.log(data.message);
                     if (data.success) {
-                      window.location.href =
-                        "account.html";
-                      sessionStorage.setItem(
-                        "username",
-                        emailInput
-                      );
-                    } else if (
-                      data.message ==
-                      "UserNotFound"
-                    ) {
-                      // Invalid Email
-                      document.getElementById(
-                        "emailValidate"
-                      ).innerHTML =
-                        "E-Mail not registered!";
-                      const emailBox =
-                        document.getElementById(
-                          "user_Email"
-                        );
-                      emailBox.classList.add(
-                        "is-invalid"
-                      );
-                    } else if (
-                      data.message ==
-                      "Invalid password"
-                    ) {
-                      document.getElementById(
-                        "emailValidate"
-                      ).innerHTML =
-                        "Enter Valid E-Mail";
-                      document
-                        .getElementById(
-                          "user_Email"
-                        )
-                        .classList.remove(
-                          "is-invalid"
-                        );
-                      passwordBox.classList.add(
-                        "is-invalid"
-                      );
+                        alert("woohoo")
+                    } else {
+                        alert("booo")
                     }
                   }
                 })

@@ -20,6 +20,17 @@
     <link rel="stylesheet" href="style-hy/cart.css">
     <link rel="stylesheet" href="style-hy/footer.css">
   </head>
+  <script>
+    (function() {
+  // Check for SessionStorage data 
+  var userData = sessionStorage.getItem("username");
+
+  // If no user data in sessionStorage, redirect to login
+  if (!userData) {
+    location.href = "/login.html";
+  }
+})();
+  </script>
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
