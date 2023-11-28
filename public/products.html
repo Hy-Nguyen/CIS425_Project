@@ -13,545 +13,810 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style-hy/footer.css">
-    <link rel="stylesheet" href="style-hy/navBar.css" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <img class="logo-header" src="assets-henry/latest-logo.png" alt="">
-        >
-        <!-- change -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span
-            class="navbar-toggler-icon"
-          ></span>
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNav"
-        >
-          <ul
-            class="navbar-nav ms-auto navbar-items"
-          >
-            <li class="nav-item">
-              <a
-                class="nav-link rounded-3"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link rounded-3"
-                href="products.html"
-                >Products</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link rounded-3"
-                href="contact.html"
-                >Contact Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link rounded-3"
-                href="account.html"
-                >Account</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link rounded-3"
-                href="cart.html"
-                >Cart</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <main>
-      <!-- START CONTENT HERE -->
-      <head>
-        <title>Product Page</title>
-        <style>
-            .product {
-                background-color: #210f24;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                max-width: 600px;
-                height: auto;
-                margin: 20px auto;
-                padding: 20px;
-            }
-    
-            .product h1 {
-                font-size: 24px;
-            }
-    
-            .spec {
-                margin: 10px 0;
-            }
-    
-            .spec p {
-                margin: 5px 0;
-            }
-    
-            .price {
-                font-size: 24px;
-                font-weight: bold;
-                margin: 20px 0;
-            }
-    
-            .btn-block {
-                display: flex;
-                justify-content: space-between;
-            }
-    
-            .button {
-                padding: 10px 20px;
-                background-color: #860EFD;
-                color: #fff;
-                text-decoration: none;
-                border: none;
-                border-radius: 5px;
-            }
-    
-            .button:hover {
-                background-color: #600BAD;
-            }
-    
-            .view-details {
-                text-decoration: none;
-                color: #860EFD;
-            }
-    
-            .btn-black {
-                background-color: #000;
-                color: #fff;
-                padding: 10px 20px;
-                text-decoration: none;
-                border: none;
-                border-radius: 5px;
-            }
-    
-            .btn-black:hover {
-                background-color: #333;
-            }
-        </style>
-    </head>
-    <html>
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Products</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #210f24;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .product-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #2f1533;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .product-description {
-            flex: 1;
-        }
-        .product-image {
-            flex: 1;
-            margin-left: 20px;
-            text-align: center;
-        }
-        h2 {
-            font-size: 24px;
-            color: #f1e2f3;
-        }
-        .specs {
-            margin: 10px 0;
-            color: #f1e2f3;
-        }
-        .price {
-            font-size: 30px;
-            color: #860EFD;
-            margin-top: 10px;
-        }
-        .product-image img {
-            max-width: 100%;
-        }
-        .quantity {
-           color: #fff; /* Add this line to set the text color to white */
-        }
 
-        
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="style-hy/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      href="style-hy/navBar.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #210f24;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .product-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2f1533;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .product-description {
+        flex: 1;
+      }
+      .product-image {
+        flex: 1;
+        margin-left: 20px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 24px;
+        color: #f1e2f3;
+      }
+      .specs {
+        margin: 10px 0;
+        color: #f1e2f3;
+      }
+      .price {
+        font-size: 30px;
+        color: #860efd;
+        margin-top: 10px;
+      }
+      .product-image img {
+        max-width: 100%;
+      }
+      .quantity {
+        color: #fff; /* Add this line to set the text color to white */
+      }
     </style>
-</head>
-<body>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form class="form-inline search-form d-flex flex-row">
-          <input class="form-control search-input" type="search" placeholder="Search PC" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+  </head>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <img
+        class="logo-header"
+        src="assets-henry/latest-logo.png"
+        alt=""
+      />
+      >
+      <!-- change -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNav"
+      >
+        <ul
+          class="navbar-nav ms-auto navbar-items"
+        >
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3"
+              aria-current="page"
+              href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3"
+              href="products.html"
+              >Products</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3"
+              href="contact.html"
+              >Contact Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3"
+              href="account.html"
+              >Account</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3"
+              href="cart.html"
+              >Cart</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-    <div class="container">
+  </nav>
+  <main>
+    <!-- START CONTENT HERE -->
+    <body>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form
+              class="form-inline search-form d-flex flex-row"
+            >
+              <input
+                class="form-control search-input"
+                type="search"
+                placeholder="Search PC"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
         <div class="product-container rounded-4">
-            <div class="product-description">
-              <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">APOLLO 14</h2>
-              <div class="specs">
-                <p><strong>CHASSIS:</strong> DEEPCOOL CH370 - BLACK</p>
-                <p><strong>PROCESSOR:</strong> INTEL CORE I5-14600KF</p>
-                <p><strong>GRAPHICS CARD:</strong> NVIDIA GEFORCE RTX 4060 TI</p>
-                <p><strong>MOTHERBOARD:</strong> ASUS TUF GAMING B760M WIFI D4</p>
-                <p><strong>MEMORY:</strong> 32GB META RGB DDR4 3600MHZ (2X16GB)</p>
-                <p><strong>COOLING:</strong> DEEPCOOL LS520</p>
-                <p><strong>POWER SUPPLY:</strong> META 750W</p>
-                <p><strong>OPERATING SYSTEM:</strong> MICROSOFT WINDOWS 11 HOME</p>
-                <p><strong>M.2 STORAGE | SLOT 1:</strong> 500GB META M.2</p>
-                <p><strong>RGB CASE FANS:</strong> META 120MM RGB FAN - BLACK X5</p>
+          <div class="product-description">
+            <h2
+              style="
+                color: #860efd;
+                font-size: 38px;
+                font-weight: bold;
+              "
+            >
+              APOLLO 14
+            </h2>
+            <div class="specs">
+              <p>
+                CHASSIS: DEEPCOOL CH370 - BLACK
+              </p>
+              <p>
+                PROCESSOR: INTEL CORE I5-14600KF
+              </p>
+              <p>
+                GRAPHICS CARD: NVIDIA GEFORCE RTX
+                4060 TI
+              </p>
+              <p>
+                MOTHERBOARD: ASUS TUF GAMING B760M
+                WIFI D4
+              </p>
+              <p>
+                MEMORY: 32GB META RGB DDR4 3600MHZ
+                (2X16GB)
+              </p>
+              <p>COOLING: DEEPCOOL LS520</p>
+              <p>POWER SUPPLY: META 750W</p>
+              <p>
+                OPERATING SYSTEM: MICROSOFT
+                WINDOWS 11 HOME
+              </p>
+              <p>
+                M.2 STORAGE | SLOT 1: 500GB META
+                M.2
+              </p>
+              <p>
+                RGB CASE FANS: META 120MM RGB FAN
+                - BLACK X5
+              </p>
             </div>
             <p class="price">$1939</p>
             <div class="quantity">
-                <label for="quantity-apollo">Quantity:</label>
-                <input type="number" id="quantity-apollo" value="1" min="1">
+              <label for="quantity-apollo"
+                >Quantity:</label
+              >
+              <input
+                type="number"
+                id="quantity-apollo"
+                value="1"
+                min="1"
+              />
             </div>
-            <button class="add-to-cart-button" data-product="META APOLLO 14" data-price="1939" data-image="/assets-aryan/apollo.png" style="margin-top: 10px; background-color: #860EFD; border-radius: 5px; color: #fff;">Add to Cart</button>
+            <button
+              class="add-to-cart-button"
+              id="atc-apollo-14"
+              data-product="META APOLLO 14"
+              data-price="1939"
+              data-image="/assets-aryan/apollo.png"
+              style="
+                margin-top: 10px;
+                background-color: #860efd;
+                border-radius: 5px;
+                color: #fff;
+              "
+            >
+              Add to Cart
+            </button>
           </div>
-        <div class="product-image">
-            <img src="assets-aryan/apollo.png" alt="META APOLLO 14">
+          <div class="product-image">
+            <img
+              src="assets-aryan/apollo.png"
+              alt="META APOLLO 14"
+            />
+          </div>
         </div>
-    </div>
-    
-    
 
-    <div class="product-container rounded-4">
-        <div class="product-description ">
-          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">MONOTECH</h2>
-          <div class="specs">
-                <p><strong>CHASSIS:</strong> MONTECH AIR 100</p>
-                <p><strong>PROCESSOR:</strong> AMD RYZEN™ 5 5600X</p>
-                <p><strong>GRAPHICS CARD:</strong> AMD RADEON RX 6700 XT</p>
-                <p><strong>MOTHERBOARD:</strong> ASUS TUF GAMING B550M-PLUS WIFI 2</p>
-                <p><strong>MEMORY:</strong> 32GB META RGB DDR4 3600MHZ (2x16GB)</p>
-                <p><strong>COOLING:</strong> AZZA CUBE 240</p>
-                <p><strong>POWER SUPPLY:</strong> META 750W</p>
-                <p><strong>OPERATING SYSTEM:</strong> Windows 11 Home</p>
-                <p><strong>M.2 STORAGE | SLOT 1:</strong> 1TB Meta M.2</p>
+        <div class="product-container rounded-4">
+          <div class="product-description">
+            <h2
+              style="
+                color: #860efd;
+                font-size: 38px;
+                font-weight: bold;
+              "
+            >
+              MONOTECH
+            </h2>
+            <div class="specs">
+              <p>CHASSIS: MONTECH AIR 100</p>
+              <p>PROCESSOR: AMD RYZEN™ 5 5600X</p>
+              <p>
+                GRAPHICS CARD: AMD RADEON RX 6700
+                XT
+              </p>
+              <p>
+                MOTHERBOARD: ASUS TUF GAMING
+                B550M-PLUS WIFI 2
+              </p>
+              <p>
+                MEMORY: 32GB META RGB DDR4 3600MHZ
+                (2x16GB)
+              </p>
+              <p>COOLING: AZZA CUBE 240</p>
+              <p>POWER SUPPLY: META 750W</p>
+              <p>
+                OPERATING SYSTEM: Windows 11 Home
+              </p>
+              <p>
+                M.2 STORAGE | SLOT 1: 1TB Meta M.2
+              </p>
             </div>
             <p class="price">$1539</p>
             <div class="quantity">
-                <label for="quantity-montech">Quantity:</label>
-                <input type="number" id="quantity-montech" value="1" min="1">
+              <label for="quantity-montech"
+                >Quantity:</label
+              >
+              <input
+                type="number"
+                id="quantity-montech"
+                value="1"
+                min="1"
+              />
             </div>
-            <button class="add-to-cart-button" data-product="META MONTECH" data-price="1539" data-image="/assets-aryan/montech.png" style="margin-top: 10px; background-color: #860EFD; border-radius: 5px; color: #fff;">Add to Cart</button>
+            <button
+              class="add-to-cart-button"
+              id="atc-monotech"
+              data-product="META MONOTECH"
+              data-price="1539"
+              data-image="/assets-aryan/montech.png"
+              style="
+                margin-top: 10px;
+                background-color: #860efd;
+                border-radius: 5px;
+                color: #fff;
+              "
+            >
+              Add to cart
+            </button>
           </div>
-        <div class="product-image">
-            <img src="assets-aryan/montech.png" alt="META MONTECH">
+          <div class="product-image">
+            <img
+              src="assets-aryan/montech.png"
+              alt="META MONTECH"
+            />
+          </div>
         </div>
-    </div>
 
-
-    <div class="product-container rounded-4">
-        <div class="product-description ">
-          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">SERENITY</h2>
+        <div class="product-container rounded-4">
+          <div class="product-description">
+            <h2
+              style="
+                color: #860efd;
+                font-size: 38px;
+                font-weight: bold;
+              "
+            >
+              SERENITY
+            </h2>
             <div class="specs">
-                <p><strong>CHASSIS:</strong> LM300 ARGB</p>
-                <p><strong>PROCESSOR:</strong> INTEL CORE I3-12100F</p>
-                <p><strong>GRAPHICS CARD:</strong> NVIDIA GEFORCE RTX 3050</p>
-                <p><strong>MOTHERBOARD:</strong> ASROCK B660M-HDV + WIFI6</p>
-                <p><strong>MEMORY:</strong> 16GB META DDR4 3600MHZ (2X8GB)</p>
-                <p><strong>COOLING:</strong> DEEPCOOL AG400</p>
-                <p><strong>POWER SUPPLY:</strong> META 550W</p>
-                <p><strong>OPERATING SYSTEM:</strong> MICROSOFT WINDOWS 11 HOME</p>
-                <p><strong>M.2 STORAGE | SLOT 1:</strong> 1TB META M.2</p>
+              <p>CHASSIS: LM300 ARGB</p>
+              <p>
+                PROCESSOR: INTEL CORE I3-12100F
+              </p>
+              <p>
+                GRAPHICS CARD: NVIDIA GEFORCE RTX
+                3050
+              </p>
+              <p>
+                MOTHERBOARD: ASROCK B660M-HDV +
+                WIFI6
+              </p>
+              <p>
+                MEMORY: 16GB META DDR4 3600MHZ
+                (2X8GB)
+              </p>
+              <p>COOLING: DEEPCOOL AG400</p>
+              <p>POWER SUPPLY: META 550W</p>
+              <p>
+                OPERATING SYSTEM: MICROSOFT
+                WINDOWS 11 HOME
+              </p>
+              <p>
+                M.2 STORAGE | SLOT 1: 1TB META M.2
+              </p>
             </div>
             <p class="price">$919</p>
             <div class="quantity">
-                <label for="quantity-serenity">Quantity:</label>
-                <input type="number" id="quantity-serenity" value="1" min="1">
+              <label for="quantity-serenity"
+                >Quantity:</label
+              >
+              <input
+                type="number"
+                id="quantity-serenity"
+                value="1"
+                min="1"
+              />
             </div>
-            <button class="add-to-cart-button" data-product="META MONTECH" data-price="1539" data-image="/assets-aryan/montech.png" style="margin-top: 10px; background-color: #860EFD; border-radius: 5px; color: #fff;">Add to Cart</button>
+            <button
+              class="add-to-cart-button"
+              data-product="META SERENITY"
+              id="atc-serenity"
+              data-price="919"
+              data-image="assets-aryan/serenity.png"
+              style="
+                margin-top: 10px;
+                background-color: #860efd;
+                border-radius: 5px;
+                color: #fff;
+              "
+            >
+              Add to Cart
+            </button>
           </div>
-        <div class = "product-image">
-            <img src="assets-aryan/serenity.png" alt="META SERENITY">
+          <div class="product-image">
+            <img
+              src="assets-aryan/serenity.png"
+              alt="META SERENITY"
+            />
+          </div>
         </div>
-    </div>
 
-    <div class="product-container rounded-4">
-      <div class="product-description">
-          <h2 style="color: #860EFD; font-size: 38px; font-weight: bold;">P41n Str33t</h2>
-          <div class="specs">
-              <p><strong>CHASSIS:</strong> HYTE Y40 - BLACK</p>
-              <p><strong>PROCESSOR:</strong> INTEL CORE™ I7-14700K</p>
-              <p><strong>GRAPHICS CARD:</strong> NVIDIA GEFORCE RTX 4080</p>
-              <p><strong>MOTHERBOARD:</strong> ASROCK Z790 STEEL LEGEND</p>
-              <p><strong>MEMORY:</strong> 32GB KINGSTON FURY DDR5 6400MHZ (2X16GB)</p>
-              <p><strong>COOLING:</strong> DEEPCOOL LS720</p>
-              <p><strong>POWER SUPPLY:</strong> EVGA 1000W</p>
-              <p><strong>OPERATING SYSTEM:</strong>MICROSOFT WINDOWS 11 HOME</p>
-              <p><strong>M.2 STORAGE | SLOT 1:</strong> 2TB META M.2</p>
-              <p><strong>RGB CASE FANS:</strong>META 120MM RGB CASE FANS X5 - BLACK</p>
+        <div class="product-container rounded-4">
+          <div class="product-description">
+            <h2
+              style="
+                color: #860efd;
+                font-size: 38px;
+                font-weight: bold;
+              "
+            >
+              P41n Str33t
+            </h2>
+            <div class="specs">
+              <p>CHASSIS: HYTE Y40 - BLACK</p>
+              <p>
+                PROCESSOR: INTEL CORE™ I7-14700K
+              </p>
+              <p>
+                GRAPHICS CARD: NVIDIA GEFORCE RTX
+                4080
+              </p>
+              <p>
+                MOTHERBOARD: ASROCK Z790 STEEL
+                LEGEND
+              </p>
+              <p>
+                MEMORY: 32GB KINGSTON FURY DDR5
+                6400MHZ (2X16GB)
+              </p>
+              <p>COOLING: DEEPCOOL LS720</p>
+              <p>POWER SUPPLY: EVGA 1000W</p>
+              <p>
+                OPERATING SYSTEM: MICROSOFT
+                WINDOWS 11 HOME
+              </p>
+              <p>
+                M.2 STORAGE | SLOT 1: 2TB META M.2
+              </p>
+              <p>
+                RGB CASE FANS: META 120MM RGB CASE
+                FANS X5 - BLACK
+              </p>
+            </div>
+            <p class="price">$3659</p>
+            <div class="quantity">
+              <label for="quantity-new-product"
+                >Quantity:</label
+              >
+              <input
+                type="number"
+                id="quantity-new-product"
+                value="1"
+                min="1"
+              />
+            </div>
+            <button
+              class="add-to-cart-button"
+              id="atc-p4in"
+              data-product="P41nStr33t"
+              data-price="3659"
+              data-image="/assets-aryan/P41nStr33t.png"
+              style="
+                margin-top: 10px;
+                background-color: #860efd;
+                border-radius: 5px;
+                color: #fff;
+              "
+            >
+              Add to Cart
+            </button>
           </div>
-          <p class="price">$3659</p>
-          <div class="quantity">
-              <label for="quantity-new-product">Quantity:</label>
-              <input type="number" id="quantity-new-product" value="1" min="1">
+          <div class="product-image">
+            <img
+              src="assets-aryan/P41n Str33t.png"
+              alt="P41n Str33t"
+            />
           </div>
-          <button class="add-to-cart-button" data-product="P41n Str33t" data-price="1999" data-image="/assets-aryan/P41n Str33t.png" style="margin-top: 10px; background-color: #860EFD; border-radius: 5px; color: #fff;">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-image">
-          <img src="assets-aryan/P41n Str33t.png" alt="P41n Str33t">
-      </div>
-  </div>
-  
-    
-</body>
-        
-</main>
-<footer
-class="text-center text-lg-start text-white"
-style="background-color: #1c2331"
->
-<!-- Section: Social media -->
-<section
-  class="d-flex justify-content-between p-4 social-media-container"
->
-  <!-- Left -->
-  <div class="my-2">
-    <span
-      >Get connected with us on social
-      networks:</span
-    >
-  </div>
-  <!-- Left -->
+    </body>
 
-  <!-- Right -->
-  <div>
-    <a
-      href="https://www.facebook.com/METAPCs"
-      target="_blank"
-      class="text-white me-4"
+    <footer
+      class="text-center text-lg-start text-white"
+      style="background-color: #1c2331"
     >
-      <i class="bi bi-facebook"></i>
-    </a>
-    <a
-      href="https://twitter.com/metapcs"
-      target="_blank"
-      class="text-white me-4"
-    >
-      <i class="bi bi-twitter"></i>
-    </a>
-    <a
-      href="https://www.instagram.com/metapcsonline"
-      target="_blank"
-      class="text-white me-4"
-    >
-      <i class="bi bi-instagram"></i>
-    </a>
-    <a
-      href="https://www.youtube.com/metapcs"
-      target="_blank"
-      class="text-white me-4"
-    >
-      <i class="bi bi-youtube"></i>
-    </a>
-  </div>
-  <!-- Right -->
-</section>
-<!-- Section: Social media -->
-
-<!-- Section: Links  -->
-<section class="footer-container">
-  <div
-    class="container text-center text-md-start pt-5 footer-body"
-  >
-    <!-- Grid row -->
-    <div class="row mt-3">
-      <!-- Grid column -->
-      <div
-        class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-between p-4 social-media-container"
       >
-        <!-- Content -->
-        <h6
-          class="footer-header text-uppercase fw-bold"
-        >
-          META PC
-        </h6>
-        <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="
-            width: 60px;
-            background-color: #7c4dff;
-            height: 2px;
-          "
-        />
-        <p>
-          We build high-quality and reliable
-          PC's to match YOUR needs! Check
-          out our higlighted products, or
-          customize your own to your
-          workflow.
-        </p>
-      </div>
-      <!-- Grid column -->
+        <!-- Left -->
+        <div class="my-2">
+          <span
+            >Get connected with us on social
+            networks:</span
+          >
+        </div>
+        <!-- Left -->
 
-      <!-- Grid column -->
-      <div
-        class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"
-      >
-        <!-- Links -->
-        <h6
-          class="text-uppercase fw-bold footer-header"
-        >
-          Products
-        </h6>
-        <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="
-            width: 60px;
-            background-color: #7c4dff;
-            height: 2px;
-          "
-        />
-        <p>
+        <!-- Right -->
+        <div>
           <a
-            href="products.html"
-            class="text-white"
-            >Sample PC 1</a
+            href="https://www.facebook.com/METAPCs"
+            target="_blank"
+            class="text-white me-4"
           >
-        </p>
-        <p>
+            <i class="bi bi-facebook"></i>
+          </a>
           <a
-            href="products.html"
-            class="text-white"
-            >Sample PC 2</a
+            href="https://twitter.com/metapcs"
+            target="_blank"
+            class="text-white me-4"
           >
-        </p>
-      </div>
-      <!-- Grid column -->
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/metapcsonline"
+            target="_blank"
+            class="text-white me-4"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/metapcs"
+            target="_blank"
+            class="text-white me-4"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
 
-      <!-- Grid column -->
-      <div
-        class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
-      >
-        <!-- Links -->
-        <h6
-          class="text-uppercase fw-bold footer-header"
+      <!-- Section: Links  -->
+      <section class="footer-container">
+        <div
+          class="container text-center text-md-start pt-5 footer-body"
         >
-          Useful links
-        </h6>
-        <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="
-            width: 60px;
-            background-color: #7c4dff;
-            height: 2px;
-          "
-        />
-        <p>
-          <a href="#!" class="text-white"
-            >Log In / Sign Up</a
-          >
-        </p>
-        <p>
-          <a href="#!" class="text-white"
-            >Your Account</a
-          >
-        </p>
-        <p>
-          <a href="#!" class="text-white"
-            >Contact Us</a
-          >
-        </p>
-      </div>
-      <!-- Grid column -->
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div
+              class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"
+            >
+              <!-- Content -->
+              <h6
+                class="footer-header text-uppercase fw-bold"
+              >
+                META PC
+              </h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="
+                  width: 60px;
+                  background-color: #7c4dff;
+                  height: 2px;
+                "
+              />
+              <p>
+                We build high-quality and reliable
+                PC's to match YOUR needs! Check
+                out our higlighted products, or
+                customize your own to your
+                workflow.
+              </p>
+            </div>
+            <!-- Grid column -->
 
-      <!-- Grid column -->
+            <!-- Grid column -->
+            <div
+              class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"
+            >
+              <!-- Links -->
+              <h6
+                class="text-uppercase fw-bold footer-header"
+              >
+                Products
+              </h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="
+                  width: 60px;
+                  background-color: #7c4dff;
+                  height: 2px;
+                "
+              />
+              <p>
+                <a
+                  href="products.html"
+                  class="text-white"
+                  >Sample PC 1</a
+                >
+              </p>
+              <p>
+                <a
+                  href="products.html"
+                  class="text-white"
+                  >Sample PC 2</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div
+              class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+            >
+              <!-- Links -->
+              <h6
+                class="text-uppercase fw-bold footer-header"
+              >
+                Useful links
+              </h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="
+                  width: 60px;
+                  background-color: #7c4dff;
+                  height: 2px;
+                "
+              />
+              <p>
+                <a href="#!" class="text-white"
+                  >Log In / Sign Up</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white"
+                  >Your Account</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white"
+                  >Contact Us</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div
+              class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+            >
+              <!-- Links -->
+              <h6
+                class="text-uppercase fw-bold footer-header"
+              >
+                Contact Us
+              </h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="
+                  width: 60px;
+                  background-color: #7c4dff;
+                  height: 2px;
+                "
+              />
+              <p>
+                <i class="fas fa-home mr-3"></i>
+                3259 E. Harbour Drive Suite 101
+              </p>
+              <p>
+                <i class="fas fa-home mr-3"></i>
+                Phoenix, Arizona 85034
+              </p>
+              <p>
+                <i
+                  class="fas fa-envelope mr-3"
+                ></i>
+                support@metapcs.com
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i>
+                + 01 833 638 2727
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
       <div
-        class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+        class="text-center p-3 footer-copyright"
+        style="
+          background-color: var(--secondary);
+          color: var(--text);
+        "
       >
-        <!-- Links -->
-        <h6
-          class="text-uppercase fw-bold footer-header"
-        >
-          Contact Us
-        </h6>
-        <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="
-            width: 60px;
-            background-color: #7c4dff;
-            height: 2px;
-          "
-        />
-        <p>
-          <i class="fas fa-home mr-3"></i>
-          3259 E. Harbour Drive Suite 101
-        </p>
-        <p>
-          <i class="fas fa-home mr-3"></i>
-          Phoenix, Arizona 85034
-        </p>
-        <p>
-          <i
-            class="fas fa-envelope mr-3"
-          ></i>
-          support@metapcs.com
-        </p>
-        <p>
-          <i class="fas fa-phone mr-3"></i>
-          + 01 833 638 2727
-        </p>
+        © 2023 Copyright:
+        <a class="text-white" href="">META PCs</a>
       </div>
-      <!-- Grid column -->
-    </div>
-    <!-- Grid row -->
-  </div>
-</section>
-<!-- Section: Links  -->
+      <!-- Copyright -->
+    </footer>
+    <script>
+      function addToCart(item) {
+        var existingCart =
+          JSON.parse(
+            localStorage.getItem("cart")
+          ) || {}; // Retrieve cart or create an empty object if no cart
+        var newProduct = {
+          productName: item.productName,
+          productPrice: item.productPrice,
+          Quantity: item.quantity
+        }; // New item you want to add
 
-<!-- Copyright -->
-<div
-  class="text-center p-3 footer-copyright"
-  style="
-    background-color: var(--secondary);
-    color: var(--text);
-  "
->
-  © 2023 Copyright:
-  <a class="text-white" href="">META PCs</a>
-</div>
-<!-- Copyright -->
-</footer>
-</body>
+        if (
+          existingCart[newProduct.productName]
+        ) {
+          // If the product already exists in the cart, increment the quantity
+          existingCart[
+            newProduct.productName
+          ].Quantity =
+            parseInt(
+              existingCart[newProduct.productName]
+                .Quantity
+            ) + parseInt(newProduct.Quantity);
+        } else {
+          // If the product is not in the cart, add it
+          existingCart[newProduct.productName] =
+            newProduct;
+        }
+
+        localStorage.setItem(
+          "cart",
+          JSON.stringify(existingCart)
+        ); // Store the object as a string
+        alert('Item added to cart!');
+      }
+      function getProductDetail(
+        button,
+        quantity
+      ) {
+        var specs =
+          button.parentElement.querySelectorAll(
+            ".specs p"
+          );
+
+        var productDetails = {};
+        console.log(specs.textContent);
+
+        specs.forEach((spec) => {
+          var text = spec.textContent
+            .replace(/\s\s+/g, " ")
+            .trim()
+            .replace(/\n/g, "");
+          var splitText = text.split(":");
+          var key = splitText[0].trim();
+          var value = splitText[1].trim();
+
+          productDetails[key] = value;
+        });
+
+        productDetails["productName"] = button
+          .getAttribute("data-product")
+          .trim();
+        productDetails["productPrice"] = button
+          .getAttribute("data-price")
+          .trim();
+        productDetails["productImage"] = button
+          .getAttribute("data-image")
+          .trim();
+
+        productDetails["quantity"] = quantity;
+        addToCart(productDetails);
+        return productDetails;
+      }
+
+      const montech_atc = document.getElementById(
+        "atc-monotech"
+      );
+      const apollo_atc = document.getElementById(
+        "atc-apollo-14"
+      );
+      const serenity_atc =
+        document.getElementById("atc-serenity");
+
+      const p4in_atc =
+        document.getElementById("atc-p4in");
+
+      apollo_atc.addEventListener(
+        "click",
+        function () {
+          console.log("hello");
+          // Code to be executed when the button is clicked
+          console.log(
+            getProductDetail(apollo_atc, 1)
+          );
+        }
+      );
+      montech_atc.addEventListener(
+        "click",
+        function () {
+          console.log("hello");
+          // Code to be executed when the button is clicked
+          console.log(
+            getProductDetail(montech_atc, 1)
+          );
+        }
+      );
+      serenity_atc.addEventListener(
+        "click",
+        function () {
+          console.log("hello");
+          // Code to be executed when the button is clicked
+          console.log(
+            getProductDetail(serenity_atc, 1)
+          );
+        }
+      );
+      p4in_atc.addEventListener(
+        "click",
+        function () {
+          console.log("hello");
+          // Code to be executed when the button is clicked
+          console.log(
+            getProductDetail(p4in_atc, 1)
+          );
+        }
+      );
+    </script>
+  </main>
 </html>
-<!DOCTYPE html>
-<html>

@@ -37,3 +37,9 @@ main{
     border: none;
     box-shadow: var(--shadow-elevation-medium);
 }
+.cart-item a{
+  color: var(--text);
+}
+.cart-item a:hover{
+  color: var(--background);
+}
