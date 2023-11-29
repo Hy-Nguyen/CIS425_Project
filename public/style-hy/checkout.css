@@ -1,0 +1,46 @@
+:root{
+    --button-color: #ef4339;
+    --text: #f1e2f3;
+    --background: #210f24;
+    --primary: #480c51;
+    --secondary: #2f1533;
+    --accent: #ae58bb;
+  }
+main{
+    background-color: var(--accent);
+    color: var(--text);
+}
+.badge{
+    background-color: var(--background);
+}
+.cart-item{
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.btn-primary{
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+    margin-bottom: 5%;
+}
+.btn-primary:hover{
+    background-color:var(--text);
+    color: var(--background);
+}
+.cart-item a{
+  color: var(--text);
+}
+.cart-item a:hover{
+  color: var(--background);
+}
+.invalid-feedback{
+    color:var(--text);
+}
+.form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label {
+    color: var(--text);
+}
+.spacer{
+    border: none;
+    height: 1px;
+    background-color: transparent;
+}

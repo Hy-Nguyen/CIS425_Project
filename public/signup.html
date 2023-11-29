@@ -623,9 +623,11 @@
                   } else {
                     console.log(data.message);
                     if (data.success) {
-                        alert("woohoo")
+                      alert(data.message);
+                      window.location.href =
+                        "/login.html";
                     } else {
-                        alert("booo")
+                      alert(data.message);
                     }
                   }
                 })

@@ -43,3 +43,12 @@ main{
 .cart-item a:hover{
   color: var(--background);
 }
+.btn-primary:hover{
+  background-color: var(--primary);
+}
+#checkout-link{
+  color: var(--text)
+}
+#checkout-link:hover{
+  color: var(--accent)
+}

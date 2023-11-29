@@ -2,7 +2,6 @@ const {MongoClient} = require('mongodb');
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
-const bcrypt = require('bcrypt')
 
 
 const fileExtenions = {
@@ -52,10 +51,26 @@ app.get('/products', (req, res) => {
 const db = client.db('MetaPC');
 const usersCollection = db.collection("users")
 const contact_collection = db.collection('contact_form');
+const order_collection = db.collection('orders');
 
 // Start the Express server
 client.connect()
   .then(() => {
+    usersCollection.createIndex({ "email": 1 }, { unique: true })
+      .then(() => {
+        console.log('Index created');
+      })
+      .catch((err) => {
+        console.error('Error creating index:', err);
+      });
+      order_collection.createIndex({ "orderID": 1 }, { unique: true })
+      .then(() => {
+        console.log('Index created');
+      })
+      .catch((err) => {
+        console.error('Error creating index:', err);
+      });
+
     app.listen(8000, () => {
       console.log(`The web server is alive! \nListening on http://localhost:8000/login.html`);
     });
@@ -108,10 +123,30 @@ app.post('/signup', async (req, res) => {
     // collection = usersCollection
     const {firstName, lastName, email, address, password} = req.body;
     try {
-        console.log(firstName);
-        console.log(req.body);
-        usersCollection.insertOne(req.body)
-        res.json({ success: true, message: 'User created successfully!'});
+        // Check if email already exists
+        const user = await usersCollection.findOne({ email: email });
+        if (user) {
+            res.json({ success: false, message: 'Email already registered.'});
+        }
+        else {
+            usersCollection.insertOne(req.body)
+            res.json({ success: true, message: 'Account Created! Please Log In.'});
+        }
+
+    } catch (err) {
+        res.json({ success: false, error: err.message });
+    }
+});
+
+// Checkout Processing
+app.post('/checkout', async (req, res) => {
+    // collection = order_collection
+    const {orderID, fName, lName, email, address, payment, cart} = req.body;
+    console.log(req.body)
+    try {
+        console.log(fName);
+        order_collection.insertOne(req.body)
+        res.json({ success: true, message: 'Order Recieved!'});
     } catch (err) {
         res.json({ success: false, error: err.message });
     }
