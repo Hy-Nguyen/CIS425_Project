@@ -7,3 +7,23 @@ form{
 .login-header{
     padding-top: 2%;
 }
+main{
+    background-color: var(--background);
+    color: var(--text);
+}
+html{
+    background-color: var(--background);
+}
+.btn-primary{
+    background-color: var(--accent);
+    border: none;
+}
+.btn-primary:hover{
+    background-color: var(--primary);
+    border: none;
+    color: var(--text);
+}
+
+#register{
+    color: var(--accent);
+}
