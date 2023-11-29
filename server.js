@@ -28,6 +28,9 @@ app.get('/account', (req, res) => {
 app.get('/cart', (req, res) => {
     res.sendFile(path.join(__dirname, 'cart.html'));
 });
+app.get('/checkout', (req, res) => {
+    res.sendFile(path.join(__dirname, 'checkout.html'));
+});
 app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'contact.html'));
 });
@@ -36,6 +39,9 @@ app.get('/login', (req, res) => {
 });
 app.get('/products', (req, res) => {
     res.sendFile(path.join(__dirname, 'products.html'));
+});
+app.get('/signup', (req, res) => {
+    res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
 const db = client.db('MetaPC');

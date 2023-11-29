@@ -83,3 +83,6 @@ h1 {
     border-radius: 10px; /* Add rounded corners to images */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to images */
 }
+.row{
+    background-color: var(--background);
+}
