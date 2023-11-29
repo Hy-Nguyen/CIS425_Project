@@ -3,14 +3,8 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 
-/**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-     */
 const uri = "mongodb+srv://root:4143WMaryland.@metapc.0nhcxzq.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: false});
-// console.log(client);
-
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
