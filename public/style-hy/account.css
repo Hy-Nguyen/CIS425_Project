@@ -1,0 +1,15 @@
+body{
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+.btn-primary {
+    width: 15em;
+    background-color: var(--accent);
+    border: 0;
+}
+.spacer{
+    border: none;
+    height: 1px;
+    background-color: transparent;
+}

@@ -731,9 +731,13 @@
         
         cartContainer.appendChild(itemDiv);
       }
-      var tax = subtotal * taxRate; // Calculate tax
+      tax = subtotal * taxRate; // Calculate tax
       total = subtotal + shipping + tax; // Calculate total
 
+      window.subtotal = subtotal;
+      window.tax = tax;
+      window.shipping = shipping;
+      window.total = total;
 
     //   Display totals
       subtotalContainer.innerHTML = `<div class="">
@@ -805,8 +809,11 @@
                 var ccExpiration = document.getElementById("cc-expiration");
                 var ccCvv = document.getElementById("cc-cvv");
 
+
                 const checkoutData = {
                   orderID: generateOrderId(),
+                  orderDate: new Date().toISOString(),
+                  orderStatus: 'Received',
                   firstName: firstNameInput.value,
                   lastName: lastNameInput.value,
                   email: emailInput.value,
@@ -823,7 +830,11 @@
                       cardExpiration: ccExpiration.value,
                       cardCVV: ccCvv.value,
                   },
-                  cart: localStorage.getItem('cart')
+                  cart: JSON.parse(localStorage.getItem('cart')),
+                  subtotal: window.subtotal,
+                  tax: window.tax,
+                  shipping: window.shipping,
+                  total: window.total
             };
                 console.log(checkoutData);
                 fetch('/checkout', {

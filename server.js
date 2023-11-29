@@ -3,16 +3,6 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 
-
-const fileExtenions = {
-    '.html': 'text/html',
-    '.css': 'text/css',
-    '.js': 'text/javascript',
-    '.jpeg': 'text/jpeg',
-    '.jpg': 'text/kpeg',
-    '.png': 'text/png'
-};
-
 /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
@@ -58,14 +48,14 @@ client.connect()
   .then(() => {
     usersCollection.createIndex({ "email": 1 }, { unique: true })
       .then(() => {
-        console.log('Index created');
+        // console.log('Index created');
       })
       .catch((err) => {
         console.error('Error creating index:', err);
       });
       order_collection.createIndex({ "orderID": 1 }, { unique: true })
       .then(() => {
-        console.log('Index created');
+        // console.log('Index created');
       })
       .catch((err) => {
         console.error('Error creating index:', err);
@@ -85,7 +75,6 @@ app.post('/contact', async (req, res) => {
     try{
         await contact_collection.insertOne(req.body);
         res.json({success:true})
-        console.log(req.body)
     } catch(err) {
         console.error(err);
         res.json({ success: false });  
@@ -141,12 +130,30 @@ app.post('/signup', async (req, res) => {
 // Checkout Processing
 app.post('/checkout', async (req, res) => {
     // collection = order_collection
-    const {orderID, fName, lName, email, address, payment, cart} = req.body;
-    console.log(req.body)
+    const {orderID, orderDate, orderStatus, fName, lName, email, address, payment, cart} = req.body;
     try {
-        console.log(fName);
         order_collection.insertOne(req.body)
         res.json({ success: true, message: 'Order Recieved!'});
+    } catch (err) {
+        res.json({ success: false, error: err.message });
+    }
+});
+
+// Account Page Loading
+app.post('/loadaccount', async (req, res) => {
+    // collection = usersCollection
+    // collection = order_collection
+    const {email} = req.body;
+    try {
+        const user = await usersCollection.findOne({ email: email });
+        const userInfo = {
+            firstName: user.firstName, 
+            lastName: user.lastName,
+            address: user.address,
+            orders: await order_collection.find({ email: email }).toArray()
+        };
+        console.log(userInfo);
+        res.json({ success: true, message: '' , error: false, userInfo: userInfo});
     } catch (err) {
         res.json({ success: false, error: err.message });
     }

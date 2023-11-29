@@ -34,7 +34,7 @@ main h1{
   }
 
 #homeheroimg {
-    background-image: url("/public/assets-henry/homepage.jpg");
+    background-image: url("/assets-henry/homepage.jpg");
     background-size: cover;
     background-position: center;
     height: 500px;
